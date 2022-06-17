@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   flex-direction: column;
+   text-align: center;
 }
 
 .App-logo {
@@ -35,4 +41,35 @@
   to {
     transform: rotate(360deg);
   }
+}
+.btn{
+  border: 0.25px;
+  padding: 0.5rem 2.5rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.topheading{
+  margin: 1rem;
+}
+span{
+  font-size: larger;
+}
+/* input{
+  margin: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 0.1px solid rgba(0,0,0,0.2);
+  background: none;
+} */
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  border-radius: 0.5rem;
+  background-color: white;
+  padding: 6px 12px;
+  cursor: pointer;
 }
