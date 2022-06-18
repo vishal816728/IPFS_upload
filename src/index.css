@@ -5,10 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image:url('./images/wallpaperflare.com_wallpaper.jpg');
+  background-image:url('./images/5465904.jpg');
   padding: 0;
   border: none;
-  
+  background-size: cover;
+  mix-blend-mode: exclusion;
 }
 
 code {

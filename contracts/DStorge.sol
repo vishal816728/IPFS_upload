@@ -7,7 +7,6 @@ contract DStorage{
     struct File{
         uint fileId;
         string fileHash;
-        uint fileSize;
         string fileType;
         string fileName;
         string fileDescription;
@@ -19,7 +18,6 @@ contract DStorage{
     event FileEvent(
         uint fileId,
         string fileHash,
-        uint fileSize,
         string fileType,
         string fileName,
         string fileDescription,
@@ -31,7 +29,6 @@ contract DStorage{
     }
 
     function uploadFiles(string memory _fileHash,
-    uint _filesize,
     string memory _fileType,
     string memory _filename,
     string memory _fileDescription
@@ -41,13 +38,13 @@ contract DStorage{
         require(bytes(_fileType).length>0,"not a valid fileType");
         require(bytes(_filename).length>0,"not a valid fileName");
         require(bytes(_fileDescription).length>0,"not a valid fileDescription");
-        require(_filesize>0);
+      
         fileCount++;
 
-        files[fileCount]=File(fileCount,_fileHash,_filesize,_fileType,_filename,_fileDescription,
+        files[fileCount]=File(fileCount,_fileHash,_fileType,_filename,_fileDescription,
         block.timestamp,payable(msg.sender));
         
-        emit FileEvent(fileCount,_fileHash,_filesize,_fileType,_filename,_fileDescription,
+        emit FileEvent(fileCount,_fileHash,_fileType,_filename,_fileDescription,
         block.timestamp,payable(msg.sender));
     }
 }
